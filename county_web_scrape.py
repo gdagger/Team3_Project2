@@ -111,10 +111,11 @@ def main():
     # Add list of counties to data_df as new column
     city_df['county'] = county_list
 
+    # Export city_df as csv
+    city_df.to_csv('county_df.csv')
+
     return city_df
 
-# Export city_df as csv
-# city_df.to_csv('county_list_df.csv')
 
 if __name__ == 'main':
     main()
