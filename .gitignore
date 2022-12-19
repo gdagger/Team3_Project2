@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 
+project2readme.md
 .DS_Store
 /Resources
 /CleanedCSVs
