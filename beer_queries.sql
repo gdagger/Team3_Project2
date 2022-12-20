@@ -1,24 +1,41 @@
-DROP TABLE IF EXISTS beers, census_data, breweries;
+DROP TABLE IF EXISTS beers, breweries, county_census, state_census;
 
-CREATE TABLE census_data (
-	state VARCHAR(5) PRIMARY KEY,
+CREATE TABLE state_census (
+	state VARCHAR(5),
 	population INT,
 	med_household_income FLOAT,
 	per_capita_income FLOAT,
-	median_age FLOAT
+	median_age FLOAT,
+	PRIMARY KEY (state)
+);
+
+CREATE TABLE county_census (
+	county VARCHAR(50),
+	state VARCHAR(5),
+	population INT,
+	med_household_income FLOAT,
+	per_capita_income FLOAT,
+	median_age FLOAT,
+	PRIMARY KEY(county,state),
+	FOREIGN KEY (state) REFERENCES state_census(state)
 );
 
 CREATE TABLE breweries (
-	brewery_id INT PRIMARY KEY,
+	brewery_id INT,
 	name VARCHAR(50),
 	city VARCHAR(50),
-	state VARCHAR(5) REFERENCES census_data(state)
+	county VARCHAR(50),
+	state VARCHAR(5),
+	PRIMARY KEY (brewery_id),
+	FOREIGN KEY (county, state) REFERENCES county_census (county, state)
 );
 
 CREATE TABLE beers (
-	id INT PRIMARY KEY,
+	id INT,
 	name VARCHAR(100),
 	style VARCHAR(50),
-	brewery_id INT REFERENCES breweries(brewery_id),
-	abv FLOAT
-)
+	brewery_id INT,
+	abv FLOAT,
+	PRIMARY KEY (id),
+	FOREIGN KEY (brewery_id) REFERENCES breweries(brewery_id)
+);
