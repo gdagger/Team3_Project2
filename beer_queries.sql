@@ -21,7 +21,7 @@ CREATE TABLE county_census (
 );
 
 CREATE TABLE breweries (
-	brewery_id INT,
+	brewery_id SERIAL,
 	name VARCHAR(50),
 	city VARCHAR(50),
 	county VARCHAR(50),
