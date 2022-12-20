@@ -28,6 +28,7 @@ CREATE TABLE breweries (
 	state VARCHAR(5),
 	PRIMARY KEY (brewery_id),
 	FOREIGN KEY (county, state) REFERENCES county_census (county, state)
+	FOREIGN KEY (state) REFERENCES state_census (state)
 );
 
 CREATE TABLE beers (
