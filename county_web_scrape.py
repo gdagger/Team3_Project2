@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 
-def main():
+def county_scrape():
     # Read breweries csv file as breweries_df
     breweries_df = pd.read_csv('./CleanedCSVs/breweries_table.csv')
 
@@ -117,4 +117,4 @@ def main():
 
 
 if __name__ == 'main':
-    main()
+    county_scrape()
