@@ -22,7 +22,6 @@ def main():
     url = "https://www.stats.indiana.edu/uspr/b/place_query.html"
 
     # Open Chrome driver and go to url
-    # driver = webdriver.Chrome()
     driver = webdriver.Chrome(chrome_options=options)
     driver.get(url)
 
