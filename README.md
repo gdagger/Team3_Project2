@@ -5,7 +5,7 @@
 <hr>
 
 ### Table of Contents
-- [Overview](#overview)
+- [Project Overview](#overview)
 - [Extract](#extract)
 - [Transform](#transform)
 - [Load](#load)
@@ -15,13 +15,13 @@
 
 <br>
 
-# Overview
+# Project Overview
 
 - Our project gathers data on craft beers and breweries in the United States, as well as U.S. Census data, for potential future analysis on craft beers and the location of breweries in the United States with respect to several chosen census metrics.
 - Software: Python, Jupyter Notebook, Google Chrome DevTools, pgAdmin
 - Python Libraries: Pandas, US Census Python wrapper, SQLAlchemy, Selenium WebDriver
 
-Most of our work was completed in the [ETF.ipynb](ETL.ipynb) Jupyter Notebook file. We included all web-scraping coding in the [county_web_scrape.py](county_web_scrape.py) file, which was called into the primary notebook.
+Most of our work was completed in the [ETF.ipynb](ETL.ipynb) Jupyter Notebook file. We included all web-scraping coding in the [county_web_scrape.py](county_web_scrape.py) file, which was called in the primary notebook.
 
 <hr>
 
@@ -33,7 +33,7 @@ Our data was extracted from the following sources:
 - [US Census API (ACS5 from 2020)](https://pypi.org/project/CensusData/)
   - Used the Census Python wrapper for the US Census API to retrieve some state demographic metrics from the American Community Survey Data (ACS5 for 2020).
 - [Kaggle - Craft Beers Dataset](https://www.kaggle.com/datasets/nickhould/craft-cans?select=breweries.csv)
-  - Both csv files stored locally (not in repository) due to size
+  - Both csv files stored locally (not in repository) due to GitHub size limits
   - Used Pandas read_csv function to read in <em>[beers.csv]</em> and <em>breweries.csv</em>.
 - [StatsAmerica City-to-Country Finder](https://www.statsamerica.org/CityCountyFinder/) - web scraping county names for city/state values
   - Within the [county_web_scrape.py](county_web_scrape.py) file, we used Selenium WebDriver to scrape the website and find the corresponding county for all county/state pairs.
