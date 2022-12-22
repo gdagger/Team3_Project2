@@ -4,7 +4,7 @@
 
 <hr>
 
-### Table of Contents
+### Quick Links
 - [Project Overview](#overview)
 - [Extract](#extract)
 - [Transform](#transform)
