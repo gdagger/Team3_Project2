@@ -1,6 +1,5 @@
-# Project 2: ETL
-## Team 3
-### Glen Dagger and Chris Schultz
+# Extract, Transform, and Load Project
+### Glen Dagger
 
 <hr>
 
