@@ -1,4 +1,4 @@
-# Extract, Transform, and Load Project
+# Craft Beer and Brewery Locations in the U.S.: Extract, Transform, and Load Project
 ### Glen Dagger
 ### Chris Schultz
 
